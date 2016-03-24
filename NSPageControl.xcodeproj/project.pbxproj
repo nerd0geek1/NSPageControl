@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		736850B11CA40F1C00E2FEA0 /* NSPageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 736850B01CA40F1C00E2FEA0 /* NSPageControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		736850BA1CA4107900E2FEA0 /* NSPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736850B91CA4107900E2FEA0 /* NSPageControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		736850AD1CA40F1C00E2FEA0 /* NSPageControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSPageControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		736850B01CA40F1C00E2FEA0 /* NSPageControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSPageControl.h; sourceTree = "<group>"; };
 		736850B21CA40F1C00E2FEA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		736850B91CA4107900E2FEA0 /* NSPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSPageControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +50,7 @@
 			children = (
 				736850B01CA40F1C00E2FEA0 /* NSPageControl.h */,
 				736850B21CA40F1C00E2FEA0 /* Info.plist */,
+				736850B91CA4107900E2FEA0 /* NSPageControl.swift */,
 			);
 			path = NSPageControl;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				736850BA1CA4107900E2FEA0 /* NSPageControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +249,7 @@
 		736850B61CA40F1C00E2FEA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -257,12 +262,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nerd0geek1.NSPageControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		736850B71CA40F1C00E2FEA0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
