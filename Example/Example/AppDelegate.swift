@@ -7,21 +7,39 @@
 //
 
 import Cocoa
+import NSPageControl
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: NSWindow!
-
+    private var pageControl: NSPageControl!
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        // Insert code here to initialize your application
+        setupPageControl()
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
-        // Insert code here to tear down your application
     }
 
+    //MARK: - private
 
+    private func setupPageControl() {
+        pageControl = NSPageControl()
+        pageControl.numberOfPages = 4
+        let width: CGFloat = 200
+        let x: CGFloat = (window.frame.width - width) / 2
+        pageControl.frame = CGRectMake(x, 20, 200, 20)
+        window.contentView?.addSubview(pageControl)
+    }
+
+    //MARK: - IBAction
+
+    @IBAction func tapPreviousButton(sender: NSButton) {
+        pageControl.currentPage -= 1
+    }
+
+    @IBAction func tapNextButton(sender: NSButton) {
+        pageControl.currentPage += 1
+    }
 }
-
