@@ -9,13 +9,28 @@
 /* Begin PBXBuildFile section */
 		736850B11CA40F1C00E2FEA0 /* NSPageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 736850B01CA40F1C00E2FEA0 /* NSPageControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		736850BA1CA4107900E2FEA0 /* NSPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736850B91CA4107900E2FEA0 /* NSPageControl.swift */; };
+		7368513D1CA5582900E2FEA0 /* NSPageControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7368513C1CA5582900E2FEA0 /* NSPageControlTests.swift */; };
+		7368513F1CA5582900E2FEA0 /* NSPageControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 736850AD1CA40F1C00E2FEA0 /* NSPageControl.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		736851401CA5582900E2FEA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 736850A41CA40F1C00E2FEA0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 736850AC1CA40F1C00E2FEA0;
+			remoteInfo = NSPageControl;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		736850AD1CA40F1C00E2FEA0 /* NSPageControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSPageControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		736850B01CA40F1C00E2FEA0 /* NSPageControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSPageControl.h; sourceTree = "<group>"; };
 		736850B21CA40F1C00E2FEA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		736850B91CA4107900E2FEA0 /* NSPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSPageControl.swift; sourceTree = "<group>"; };
+		7368513A1CA5582900E2FEA0 /* NSPageControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSPageControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7368513C1CA5582900E2FEA0 /* NSPageControlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSPageControlTests.swift; sourceTree = "<group>"; };
+		7368513E1CA5582900E2FEA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +41,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		736851371CA5582900E2FEA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7368513F1CA5582900E2FEA0 /* NSPageControl.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -33,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				736850AF1CA40F1C00E2FEA0 /* NSPageControl */,
+				7368513B1CA5582900E2FEA0 /* NSPageControlTests */,
 				736850AE1CA40F1C00E2FEA0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				736850AD1CA40F1C00E2FEA0 /* NSPageControl.framework */,
+				7368513A1CA5582900E2FEA0 /* NSPageControlTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -53,6 +78,15 @@
 				736850B91CA4107900E2FEA0 /* NSPageControl.swift */,
 			);
 			path = NSPageControl;
+			sourceTree = "<group>";
+		};
+		7368513B1CA5582900E2FEA0 /* NSPageControlTests */ = {
+			isa = PBXGroup;
+			children = (
+				7368513C1CA5582900E2FEA0 /* NSPageControlTests.swift */,
+				7368513E1CA5582900E2FEA0 /* Info.plist */,
+			);
+			path = NSPageControlTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -88,16 +122,38 @@
 			productReference = 736850AD1CA40F1C00E2FEA0 /* NSPageControl.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		736851391CA5582900E2FEA0 /* NSPageControlTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 736851441CA5582900E2FEA0 /* Build configuration list for PBXNativeTarget "NSPageControlTests" */;
+			buildPhases = (
+				736851361CA5582900E2FEA0 /* Sources */,
+				736851371CA5582900E2FEA0 /* Frameworks */,
+				736851381CA5582900E2FEA0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				736851411CA5582900E2FEA0 /* PBXTargetDependency */,
+			);
+			name = NSPageControlTests;
+			productName = NSPageControlTests;
+			productReference = 7368513A1CA5582900E2FEA0 /* NSPageControlTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		736850A41CA40F1C00E2FEA0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Kohei Tabata";
 				TargetAttributes = {
 					736850AC1CA40F1C00E2FEA0 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					736851391CA5582900E2FEA0 = {
 						CreatedOnToolsVersion = 7.3;
 					};
 				};
@@ -115,12 +171,20 @@
 			projectRoot = "";
 			targets = (
 				736850AC1CA40F1C00E2FEA0 /* NSPageControl */,
+				736851391CA5582900E2FEA0 /* NSPageControlTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		736850AB1CA40F1C00E2FEA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		736851381CA5582900E2FEA0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -155,7 +219,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		736851361CA5582900E2FEA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7368513D1CA5582900E2FEA0 /* NSPageControlTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		736851411CA5582900E2FEA0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 736850AC1CA40F1C00E2FEA0 /* NSPageControl */;
+			targetProxy = 736851401CA5582900E2FEA0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		736850B31CA40F1C00E2FEA0 /* Debug */ = {
@@ -287,6 +367,30 @@
 			};
 			name = Release;
 		};
+		736851421CA5582900E2FEA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = NSPageControlTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nerd0geek1.NSPageControlTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		736851431CA5582900E2FEA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = NSPageControlTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nerd0geek1.NSPageControlTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -307,6 +411,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		736851441CA5582900E2FEA0 /* Build configuration list for PBXNativeTarget "NSPageControlTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				736851421CA5582900E2FEA0 /* Debug */,
+				736851431CA5582900E2FEA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
