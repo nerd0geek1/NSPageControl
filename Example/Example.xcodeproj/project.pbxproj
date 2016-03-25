@@ -10,18 +10,18 @@
 		736851171CA544A200E2FEA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736851161CA544A200E2FEA0 /* AppDelegate.swift */; };
 		736851191CA544A200E2FEA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 736851181CA544A200E2FEA0 /* Assets.xcassets */; };
 		7368511C1CA544A200E2FEA0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7368511A1CA544A200E2FEA0 /* MainMenu.xib */; };
-		7368512A1CA5473100E2FEA0 /* NSPageControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 736851281CA5472A00E2FEA0 /* NSPageControl.framework */; };
-		7368512B1CA5473100E2FEA0 /* NSPageControl.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 736851281CA5472A00E2FEA0 /* NSPageControl.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		736851321CA5534600E2FEA0 /* NSPageControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 736851311CA5534600E2FEA0 /* NSPageControl.framework */; };
+		736851341CA5534E00E2FEA0 /* NSPageControl.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 736851311CA5534600E2FEA0 /* NSPageControl.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		7368512C1CA5473100E2FEA0 /* Embed Frameworks */ = {
+		736851351CA5534E00E2FEA0 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				7368512B1CA5473100E2FEA0 /* NSPageControl.framework in Embed Frameworks */,
+				736851341CA5534E00E2FEA0 /* NSPageControl.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -34,7 +34,7 @@
 		736851181CA544A200E2FEA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7368511B1CA544A200E2FEA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		7368511D1CA544A200E2FEA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		736851281CA5472A00E2FEA0 /* NSPageControl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NSPageControl.framework; sourceTree = "<group>"; };
+		736851311CA5534600E2FEA0 /* NSPageControl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NSPageControl.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7368512A1CA5473100E2FEA0 /* NSPageControl.framework in Frameworks */,
+				736851321CA5534600E2FEA0 /* NSPageControl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,7 +68,7 @@
 		736851151CA544A200E2FEA0 /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				736851281CA5472A00E2FEA0 /* NSPageControl.framework */,
+				736851311CA5534600E2FEA0 /* NSPageControl.framework */,
 				736851161CA544A200E2FEA0 /* AppDelegate.swift */,
 				736851181CA544A200E2FEA0 /* Assets.xcassets */,
 				7368511A1CA544A200E2FEA0 /* MainMenu.xib */,
@@ -87,7 +87,7 @@
 				7368510F1CA544A200E2FEA0 /* Sources */,
 				736851101CA544A200E2FEA0 /* Frameworks */,
 				736851111CA544A200E2FEA0 /* Resources */,
-				7368512C1CA5473100E2FEA0 /* Embed Frameworks */,
+				736851351CA5534E00E2FEA0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
