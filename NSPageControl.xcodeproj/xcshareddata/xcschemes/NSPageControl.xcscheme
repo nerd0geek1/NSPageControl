@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "736851391CA5582900E2FEA0"
+               BuildableName = "NSPageControlTests.xctest"
+               BlueprintName = "NSPageControlTests"
+               ReferencedContainer = "container:NSPageControl.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "736850AC1CA40F1C00E2FEA0"
+            BuildableName = "NSPageControl.framework"
+            BlueprintName = "NSPageControl"
+            ReferencedContainer = "container:NSPageControl.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>

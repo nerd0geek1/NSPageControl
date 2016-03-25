@@ -29,7 +29,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         pageControl.numberOfPages = 4
         let width: CGFloat = 200
         let x: CGFloat = (window.frame.width - width) / 2
-        pageControl.frame = CGRectMake(x, 20, 200, 20)
+        pageControl.frame = CGRect(x: x, y: 20, width: 200, height: 20)
         window.contentView?.addSubview(pageControl)
     }
 
