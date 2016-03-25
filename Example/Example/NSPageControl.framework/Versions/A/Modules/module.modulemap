@@ -1,0 +1,10 @@
+framework module NSPageControl {
+  umbrella header "NSPageControl.h"
+
+  export *
+  module * { export * }
+}
+
+module NSPageControl.Swift {
+    header "NSPageControl-Swift.h"
+}
