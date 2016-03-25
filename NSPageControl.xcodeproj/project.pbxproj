@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		736850B11CA40F1C00E2FEA0 /* NSPageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 736850B01CA40F1C00E2FEA0 /* NSPageControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		736850BA1CA4107900E2FEA0 /* NSPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736850B91CA4107900E2FEA0 /* NSPageControl.swift */; };
 		7368513D1CA5582900E2FEA0 /* NSPageControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7368513C1CA5582900E2FEA0 /* NSPageControlTests.swift */; };
 		7368513F1CA5582900E2FEA0 /* NSPageControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 736850AD1CA40F1C00E2FEA0 /* NSPageControl.framework */; };
@@ -25,7 +24,6 @@
 
 /* Begin PBXFileReference section */
 		736850AD1CA40F1C00E2FEA0 /* NSPageControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSPageControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		736850B01CA40F1C00E2FEA0 /* NSPageControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSPageControl.h; sourceTree = "<group>"; };
 		736850B21CA40F1C00E2FEA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		736850B91CA4107900E2FEA0 /* NSPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSPageControl.swift; sourceTree = "<group>"; };
 		7368513A1CA5582900E2FEA0 /* NSPageControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSPageControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,7 +71,6 @@
 		736850AF1CA40F1C00E2FEA0 /* NSPageControl */ = {
 			isa = PBXGroup;
 			children = (
-				736850B01CA40F1C00E2FEA0 /* NSPageControl.h */,
 				736850B21CA40F1C00E2FEA0 /* Info.plist */,
 				736850B91CA4107900E2FEA0 /* NSPageControl.swift */,
 			);
@@ -96,7 +93,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				736850B11CA40F1C00E2FEA0 /* NSPageControl.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
