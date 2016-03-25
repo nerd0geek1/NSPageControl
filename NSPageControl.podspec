@@ -17,6 +17,6 @@ Pod::Spec.new do |s|
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "Kohei Tabata" => "nerd0geek1@gmail.com" }
   s.platform     = :osx, "10.9"
-  s.source       = { :git => "https://github.com/nerd0geek1/NSPageControl.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/nerd0geek1/NSPageControl.git", :tag => "v0.0.1" }
   s.source_files = "Classes", "NSPageControl/*.{swift}"
 end
