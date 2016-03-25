@@ -16,8 +16,8 @@ public class NSPageControl: NSView {
             if currentPage < 0 {
                 currentPage = 0
             }
-            if currentPage > numberOfPages {
-                currentPage = numberOfPages
+            if currentPage > numberOfPages - 1 {
+                currentPage = numberOfPages - 1
             }
             didSetCurrentPage(oldValue, newlySelectedPage: currentPage)
         }
