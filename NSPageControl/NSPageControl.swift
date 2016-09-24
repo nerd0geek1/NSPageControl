@@ -23,8 +23,8 @@ public class NSPageControl: NSView {
         }
     }
     public var hidesForSinglePage: Bool = true
-    public var pageIndicatorTintColor: NSColor = NSColor.darkGrayColor()
-    public var currentPageIndicatorTintColor: NSColor = NSColor.whiteColor()
+    public var pageIndicatorTintColor: NSColor = NSColor.darkGray
+    public var currentPageIndicatorTintColor: NSColor = NSColor.white
     public var animationDuration: CFTimeInterval = 0.04
     public var dotLength: CGFloat = 8.0
     public var dotMargin: CGFloat = 12.0
@@ -33,16 +33,8 @@ public class NSPageControl: NSView {
 
     //MARK: - lifecycle
 
-    public override init(frame frameRect: NSRect) {
-        super.init(frame: frameRect)
-    }
-
-    public required init?(coder: NSCoder) {
-        super.init(coder: coder)
-    }
-
-    public override func drawRect(dirtyRect: NSRect) {
-        super.drawRect(dirtyRect)
+    public override func draw(_ dirtyRect: NSRect) {
+        super.draw(dirtyRect)
 
         let minimumRequiredWidth: CGFloat = dotLength * CGFloat(numberOfPages) + dotMargin * CGFloat((numberOfPages - 1))
 
@@ -65,13 +57,14 @@ public class NSPageControl: NSView {
             let x: CGFloat              = (dirtyRect.width - minimumRequiredWidth) / 2 + (dotLength + dotMargin) * CGFloat(i)
             let y: CGFloat              = (dirtyRect.height - dotLength) / 2 - dotLength / 2
             let rect: CGRect            = NSRect(x: x, y: y, width: dotLength, height: dotLength)
-            let cgPath: CGMutablePath   = CGPathCreateMutable()
-            CGPathAddEllipseInRect(cgPath, nil, rect)
+            let cgPath: CGMutablePath   = CGMutablePath()
+            cgPath.addEllipse(in: rect)
+
 
             let fillColor: NSColor          = (i == currentPage) ? currentPageIndicatorTintColor : pageIndicatorTintColor
             let shapeLayer: CAShapeLayer    = CAShapeLayer()
             shapeLayer.path                 = cgPath
-            shapeLayer.fillColor            = fillColor.CGColor
+            shapeLayer.fillColor            = fillColor.cgColor
 
             layer?.addSublayer(shapeLayer)
             dotLayers.append(shapeLayer)
@@ -80,23 +73,23 @@ public class NSPageControl: NSView {
 
     //MARK: - private
 
-    private func didSetCurrentPage(selectedPage: Int, newlySelectedPage: Int) {
+    private func didSetCurrentPage(_ selectedPage: Int, newlySelectedPage: Int) {
         if selectedPage == newlySelectedPage {
             return
         }
 
-        let oldPageAnimation: CABasicAnimation = fillColorAnimation(pageIndicatorTintColor)
-        dotLayers[selectedPage].addAnimation(oldPageAnimation, forKey: "oldPageAnimation")
-        let newPageAnimation: CABasicAnimation = fillColorAnimation(currentPageIndicatorTintColor)
-        dotLayers[newlySelectedPage].addAnimation(newPageAnimation, forKey: "newPageAnimation")
+        let oldPageAnimation: CABasicAnimation = fillColorAnimation(with: pageIndicatorTintColor)
+        dotLayers[selectedPage].add(oldPageAnimation, forKey: "oldPageAnimation")
+        let newPageAnimation: CABasicAnimation = fillColorAnimation(with: currentPageIndicatorTintColor)
+        dotLayers[newlySelectedPage].add(newPageAnimation, forKey: "newPageAnimation")
     }
 
-    private func fillColorAnimation(color: NSColor) -> CABasicAnimation {
+    private func fillColorAnimation(with color: NSColor) -> CABasicAnimation {
         let fillColorAnimation: CABasicAnimation = CABasicAnimation(keyPath: "fillColor")
-        fillColorAnimation.toValue    = color.CGColor
+        fillColorAnimation.toValue    = color.cgColor
         fillColorAnimation.duration   = animationDuration
         fillColorAnimation.fillMode = kCAFillModeForwards
-        fillColorAnimation.removedOnCompletion = false
+        fillColorAnimation.isRemovedOnCompletion = false
         return fillColorAnimation
     }
 }

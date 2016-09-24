@@ -23,6 +23,13 @@ Then, run the following command:
 $ pod install
 ```
 
+## Requirements
+- iOS 9.0+, OS X 10.10+
+- Xcode 8.0 or above
+
+Logger is now supporting Swift3.0.
+If you want to use with Swift2.2, please use Swift2.2 branch.
+
 ##Installation with Carthage
 To integrate NSPageControl into your Xcode project using Carthage, specify it in your Cartfile:
 ```
@@ -36,6 +43,10 @@ $ carthage update
 
 ##Example
 See Example for a working example.
+Before running Example project, please execute below commands.
+```
+$ carthage build --no-skip-current
+```
 
 ##License
 This software is Open Source under the MIT license, see LICENSE for details.

@@ -15,11 +15,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var window: NSWindow!
     private var pageControl: NSPageControl!
 
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
         setupPageControl()
     }
 
-    func applicationWillTerminate(aNotification: NSNotification) {
+    func applicationWillTerminate(_ aNotification: Notification) {
     }
 
     //MARK: - private
@@ -35,11 +35,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     //MARK: - IBAction
 
-    @IBAction func tapPreviousButton(sender: NSButton) {
+    @IBAction func tapPreviousButton(_ sender: NSButton) {
         pageControl.currentPage -= 1
     }
 
-    @IBAction func tapNextButton(sender: NSButton) {
+    @IBAction func tapNextButton(_ sender: NSButton) {
         pageControl.currentPage += 1
     }
 }
