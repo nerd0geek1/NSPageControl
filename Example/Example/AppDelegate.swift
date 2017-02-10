@@ -22,7 +22,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationWillTerminate(_ aNotification: Notification) {
     }
 
-    //MARK: - private
+    // MARK: - private
 
     private func setupPageControl() {
         pageControl = NSPageControl()
@@ -33,7 +33,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.contentView?.addSubview(pageControl)
     }
 
-    //MARK: - IBAction
+    // MARK: - IBAction
 
     @IBAction func tapPreviousButton(_ sender: NSButton) {
         pageControl.currentPage -= 1

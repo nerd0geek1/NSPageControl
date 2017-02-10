@@ -31,7 +31,7 @@ public class NSPageControl: NSView {
 
     private var dotLayers: [CAShapeLayer] = []
 
-    //MARK: - lifecycle
+    // MARK: - lifecycle
 
     public override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
@@ -60,7 +60,6 @@ public class NSPageControl: NSView {
             let cgPath: CGMutablePath   = CGMutablePath()
             cgPath.addEllipse(in: rect)
 
-
             let fillColor: NSColor          = (i == currentPage) ? currentPageIndicatorTintColor : pageIndicatorTintColor
             let shapeLayer: CAShapeLayer    = CAShapeLayer()
             shapeLayer.path                 = cgPath
@@ -71,7 +70,7 @@ public class NSPageControl: NSView {
         }
     }
 
-    //MARK: - private
+    // MARK: - private
 
     private func didSetCurrentPage(_ selectedPage: Int, newlySelectedPage: Int) {
         if selectedPage == newlySelectedPage {
