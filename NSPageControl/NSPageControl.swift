@@ -31,19 +31,21 @@ public class NSPageControl: NSView {
 
     private var dotLayers: [CAShapeLayer] = []
 
-    //MARK: - lifecycle
+    // MARK: - lifecycle
 
     public override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
 
-        let minimumRequiredWidth: CGFloat = dotLength * CGFloat(numberOfPages) + dotMargin * CGFloat((numberOfPages - 1))
+        let dotWidthSum: CGFloat          = dotLength * CGFloat(numberOfPages)
+        let marginWidthSum: CGFloat       = dotMargin * CGFloat((numberOfPages - 1))
+        let minimumRequiredWidth: CGFloat =  dotWidthSum + marginWidthSum
 
         let hasEnoughHeight: Bool   = dirtyRect.height >= dotLength
         let hasEnoughWidth: Bool    = dirtyRect.width >= minimumRequiredWidth
         if !hasEnoughWidth || !hasEnoughHeight {
-            NSLog("dirtyRect doesn't have enough space to draw all dots")
-            NSLog("current Rect :\(dirtyRect)")
-            NSLog("required Size:\(CGSize(width: minimumRequiredWidth, height: dotLength))")
+            Swift.print("dirtyRect doesn't have enough space to draw all dots")
+            Swift.print("current Rect :\(dirtyRect)")
+            Swift.print("required Size:\(CGSize(width: minimumRequiredWidth, height: dotLength))")
         }
 
         for layer in dotLayers {
@@ -54,12 +56,14 @@ public class NSPageControl: NSView {
         self.wantsLayer = true
 
         for i: Int in 0..<numberOfPages {
-            let x: CGFloat              = (dirtyRect.width - minimumRequiredWidth) / 2 + (dotLength + dotMargin) * CGFloat(i)
-            let y: CGFloat              = (dirtyRect.height - dotLength) / 2 - dotLength / 2
+            let minX: CGFloat           = (dirtyRect.width - minimumRequiredWidth) / 2
+            let indexOffset: CGFloat    = (dotLength + dotMargin) * CGFloat(i)
+            let x: CGFloat              = minX + indexOffset
+            let verticalCenter: CGFloat = (dirtyRect.height - dotLength) / 2
+            let y: CGFloat              = verticalCenter - dotLength / 2
             let rect: CGRect            = NSRect(x: x, y: y, width: dotLength, height: dotLength)
             let cgPath: CGMutablePath   = CGMutablePath()
             cgPath.addEllipse(in: rect)
-
 
             let fillColor: NSColor          = (i == currentPage) ? currentPageIndicatorTintColor : pageIndicatorTintColor
             let shapeLayer: CAShapeLayer    = CAShapeLayer()
@@ -71,7 +75,7 @@ public class NSPageControl: NSView {
         }
     }
 
-    //MARK: - private
+    // MARK: - private
 
     private func didSetCurrentPage(_ selectedPage: Int, newlySelectedPage: Int) {
         if selectedPage == newlySelectedPage {
