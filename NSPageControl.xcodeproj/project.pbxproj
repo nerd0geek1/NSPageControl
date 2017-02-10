@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		7364B65E1E4D400200E5E9E2 /* SwiftLint */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 7364B6611E4D400200E5E9E2 /* Build configuration list for PBXAggregateTarget "SwiftLint" */;
+			buildPhases = (
+				7364B6621E4D400C00E5E9E2 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = SwiftLint;
+			productName = SwiftLint;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		736850BA1CA4107900E2FEA0 /* NSPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736850B91CA4107900E2FEA0 /* NSPageControl.swift */; };
 		7368513D1CA5582900E2FEA0 /* NSPageControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7368513C1CA5582900E2FEA0 /* NSPageControlTests.swift */; };
@@ -107,7 +121,6 @@
 				736850A91CA40F1C00E2FEA0 /* Frameworks */,
 				736850AA1CA40F1C00E2FEA0 /* Headers */,
 				736850AB1CA40F1C00E2FEA0 /* Resources */,
-				736850B81CA40FDE00E2FEA0 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -146,6 +159,10 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Kohei Tabata";
 				TargetAttributes = {
+					7364B65E1E4D400200E5E9E2 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
 					736850AC1CA40F1C00E2FEA0 = {
 						CreatedOnToolsVersion = 7.3;
 						LastSwiftMigration = 0800;
@@ -170,6 +187,7 @@
 			targets = (
 				736850AC1CA40F1C00E2FEA0 /* NSPageControl */,
 				736851391CA5582900E2FEA0 /* NSPageControlTests */,
+				7364B65E1E4D400200E5E9E2 /* SwiftLint */,
 			);
 		};
 /* End PBXProject section */
@@ -192,14 +210,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		736850B81CA40FDE00E2FEA0 /* SwiftLint */ = {
+		7364B6621E4D400C00E5E9E2 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = SwiftLint;
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,6 +253,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		7364B65F1E4D400200E5E9E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7364B6601E4D400200E5E9E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		736850B31CA40F1C00E2FEA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -401,6 +432,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7364B6611E4D400200E5E9E2 /* Build configuration list for PBXAggregateTarget "SwiftLint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7364B65F1E4D400200E5E9E2 /* Debug */,
+				7364B6601E4D400200E5E9E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		736850A71CA40F1C00E2FEA0 /* Build configuration list for PBXProject "NSPageControl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
